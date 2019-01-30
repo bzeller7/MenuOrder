@@ -141,6 +141,7 @@
             // 
             // txtBoxSubtotal
             // 
+            this.txtBoxSubtotal.Enabled = false;
             this.txtBoxSubtotal.Location = new System.Drawing.Point(352, 147);
             this.txtBoxSubtotal.Name = "txtBoxSubtotal";
             this.txtBoxSubtotal.Size = new System.Drawing.Size(134, 20);
@@ -148,6 +149,7 @@
             // 
             // txtBoxTax
             // 
+            this.txtBoxTax.Enabled = false;
             this.txtBoxTax.Location = new System.Drawing.Point(352, 189);
             this.txtBoxTax.Name = "txtBoxTax";
             this.txtBoxTax.Size = new System.Drawing.Size(134, 20);
