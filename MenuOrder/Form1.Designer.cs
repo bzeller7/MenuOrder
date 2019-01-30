@@ -157,6 +157,7 @@
             // 
             // txtBoxTotal
             // 
+            this.txtBoxTotal.Enabled = false;
             this.txtBoxTotal.Location = new System.Drawing.Point(352, 227);
             this.txtBoxTotal.Name = "txtBoxTotal";
             this.txtBoxTotal.Size = new System.Drawing.Size(134, 20);
@@ -179,6 +180,7 @@
             this.btnSubmitOrder.TabIndex = 13;
             this.btnSubmitOrder.Text = "SUBMIT ORDER";
             this.btnSubmitOrder.UseVisualStyleBackColor = true;
+            this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
             // Form1
             // 
