@@ -40,7 +40,7 @@
             this.txtBoxSubtotal = new System.Windows.Forms.TextBox();
             this.txtBoxTax = new System.Windows.Forms.TextBox();
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
-            this.btnCaculateOrder = new System.Windows.Forms.Button();
+            this.btnCalculateOrder = new System.Windows.Forms.Button();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -57,7 +57,6 @@
             this.cmbBoxMainChoice.Size = new System.Drawing.Size(158, 21);
             this.cmbBoxMainChoice.Sorted = true;
             this.cmbBoxMainChoice.TabIndex = 0;
-            this.cmbBoxMainChoice.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMainChoice_SelectedIndexChanged);
             // 
             // lblMainChoice
             // 
@@ -81,7 +80,6 @@
             this.cmbBoxDrink.Size = new System.Drawing.Size(159, 21);
             this.cmbBoxDrink.Sorted = true;
             this.cmbBoxDrink.TabIndex = 2;
-            this.cmbBoxDrink.SelectedIndexChanged += new System.EventHandler(this.cmbBoxDrink_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -168,15 +166,15 @@
             this.txtBoxTotal.Size = new System.Drawing.Size(134, 20);
             this.txtBoxTotal.TabIndex = 11;
             // 
-            // btnCaculateOrder
+            // btnCalculateOrder
             // 
-            this.btnCaculateOrder.Location = new System.Drawing.Point(72, 278);
-            this.btnCaculateOrder.Name = "btnCaculateOrder";
-            this.btnCaculateOrder.Size = new System.Drawing.Size(170, 70);
-            this.btnCaculateOrder.TabIndex = 12;
-            this.btnCaculateOrder.Text = "Get Total";
-            this.btnCaculateOrder.UseVisualStyleBackColor = true;
-            this.btnCaculateOrder.Click += new System.EventHandler(this.btnCaculateOrder_Click);
+            this.btnCalculateOrder.Location = new System.Drawing.Point(72, 278);
+            this.btnCalculateOrder.Name = "btnCalculateOrder";
+            this.btnCalculateOrder.Size = new System.Drawing.Size(170, 70);
+            this.btnCalculateOrder.TabIndex = 12;
+            this.btnCalculateOrder.Text = "Get Total";
+            this.btnCalculateOrder.UseVisualStyleBackColor = true;
+            this.btnCalculateOrder.Click += new System.EventHandler(this.btnCalculateOrder_Click);
             // 
             // btnSubmitOrder
             // 
@@ -194,7 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSubmitOrder);
-            this.Controls.Add(this.btnCaculateOrder);
+            this.Controls.Add(this.btnCalculateOrder);
             this.Controls.Add(this.txtBoxTotal);
             this.Controls.Add(this.txtBoxTax);
             this.Controls.Add(this.txtBoxSubtotal);
@@ -228,7 +226,7 @@
         private System.Windows.Forms.TextBox txtBoxSubtotal;
         private System.Windows.Forms.TextBox txtBoxTax;
         private System.Windows.Forms.TextBox txtBoxTotal;
-        private System.Windows.Forms.Button btnCaculateOrder;
+        private System.Windows.Forms.Button btnCalculateOrder;
         private System.Windows.Forms.Button btnSubmitOrder;
     }
 }

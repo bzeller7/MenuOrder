@@ -24,6 +24,7 @@ namespace MenuOrder
         double mainOrder = 0.0d;
         double drinkOrder = 0.0d;
 
+        double subTotal = 0.0d;
         double Tax = 7.75d;
         double Order_total = 0.0d;
 
@@ -37,20 +38,9 @@ namespace MenuOrder
             Application.Exit();
         }
 
-        private void btnCaculateOrder_Click(object sender, EventArgs e)
+        private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
-            double subTotal = mainOrder + drinkOrder;
-            txtBoxSubtotal.Text = subTotal.ToString("c");
-        }
 
-        private void cmbBoxMainChoice_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            mainOrder = (double) cmbBoxMainChoice.SelectedItem;
-        }
-
-        private void cmbBoxDrink_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            drinkOrder = (double) cmbBoxDrink.SelectedItem;
         }
     }
 }
