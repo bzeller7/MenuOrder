@@ -48,14 +48,16 @@
             // 
             this.cmbBoxMainChoice.FormattingEnabled = true;
             this.cmbBoxMainChoice.Items.AddRange(new object[] {
-            "Hamburger",
             "Cheeseburger",
+            "Hamburger",
             "Hot Dog",
             "Salad"});
             this.cmbBoxMainChoice.Location = new System.Drawing.Point(72, 62);
             this.cmbBoxMainChoice.Name = "cmbBoxMainChoice";
             this.cmbBoxMainChoice.Size = new System.Drawing.Size(158, 21);
+            this.cmbBoxMainChoice.Sorted = true;
             this.cmbBoxMainChoice.TabIndex = 0;
+            this.cmbBoxMainChoice.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMainChoice_SelectedIndexChanged);
             // 
             // lblMainChoice
             // 
@@ -70,14 +72,16 @@
             // 
             this.cmbBoxDrink.FormattingEnabled = true;
             this.cmbBoxDrink.Items.AddRange(new object[] {
+            "Beer",
             "Coke",
             "Diet Coke",
-            "Beer",
             "Water"});
             this.cmbBoxDrink.Location = new System.Drawing.Point(352, 62);
             this.cmbBoxDrink.Name = "cmbBoxDrink";
             this.cmbBoxDrink.Size = new System.Drawing.Size(159, 21);
+            this.cmbBoxDrink.Sorted = true;
             this.cmbBoxDrink.TabIndex = 2;
+            this.cmbBoxDrink.SelectedIndexChanged += new System.EventHandler(this.cmbBoxDrink_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -92,15 +96,16 @@
             // 
             this.chkListBoxTopping.FormattingEnabled = true;
             this.chkListBoxTopping.Items.AddRange(new object[] {
+            "Bacon",
             "Ketchup",
             "Mustard",
-            "Pickles",
             "Onions",
-            "Bacon",
+            "Pickles",
             "Tomato"});
             this.chkListBoxTopping.Location = new System.Drawing.Point(72, 147);
             this.chkListBoxTopping.Name = "chkListBoxTopping";
             this.chkListBoxTopping.Size = new System.Drawing.Size(120, 94);
+            this.chkListBoxTopping.Sorted = true;
             this.chkListBoxTopping.TabIndex = 4;
             // 
             // lblCondiments
@@ -171,6 +176,7 @@
             this.btnCaculateOrder.TabIndex = 12;
             this.btnCaculateOrder.Text = "Get Total";
             this.btnCaculateOrder.UseVisualStyleBackColor = true;
+            this.btnCaculateOrder.Click += new System.EventHandler(this.btnCaculateOrder_Click);
             // 
             // btnSubmitOrder
             // 
