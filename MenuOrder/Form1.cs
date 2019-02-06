@@ -25,10 +25,13 @@ namespace MenuOrder
             new Drink {Name = "Beer", Price = 7.00d},
             new Drink {Name = "Coke", Price = 2.00d},
             new Drink {Name = "DietCoke", Price = 2.00d},
-            new Drink {Name = "Water", Price = 0.50d}
+            new Drink {Name = "Water", Price = 1.00d}
         };
 
-        private void BindComboBox()
+        /// <summary>
+        /// Populates the combo boxes with the food drink objects
+        /// </summary>
+        private void BindComboBoxes()
         {
             cmbBoxMainChoice.DataSource = meals;
             cmbBoxMainChoice.DisplayMember = "Name";
@@ -46,6 +49,7 @@ namespace MenuOrder
         public Form1()
         {
             InitializeComponent();
+            BindComboBoxes();
         }
 
         private void btnSubmitOrder_Click(object sender, EventArgs e)
@@ -55,6 +59,8 @@ namespace MenuOrder
 
         private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
+            // retrieve the food and drinkselections as objects and gets their prices
+            // sends the price string to the form
             MainChoice m = cmbBoxMainChoice.SelectedItem as MainChoice;
             subTotal += m.Price;
             Drink d = cmbBoxDrink.SelectedItem as Drink;

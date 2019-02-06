@@ -47,11 +47,6 @@
             // cmbBoxMainChoice
             // 
             this.cmbBoxMainChoice.FormattingEnabled = true;
-            this.cmbBoxMainChoice.Items.AddRange(new object[] {
-            "Cheeseburger",
-            "Hamburger",
-            "Hot Dog",
-            "Salad"});
             this.cmbBoxMainChoice.Location = new System.Drawing.Point(72, 62);
             this.cmbBoxMainChoice.Name = "cmbBoxMainChoice";
             this.cmbBoxMainChoice.Size = new System.Drawing.Size(158, 21);
@@ -70,11 +65,6 @@
             // cmbBoxDrink
             // 
             this.cmbBoxDrink.FormattingEnabled = true;
-            this.cmbBoxDrink.Items.AddRange(new object[] {
-            "Beer",
-            "Coke",
-            "Diet Coke",
-            "Water"});
             this.cmbBoxDrink.Location = new System.Drawing.Point(352, 62);
             this.cmbBoxDrink.Name = "cmbBoxDrink";
             this.cmbBoxDrink.Size = new System.Drawing.Size(159, 21);
