@@ -14,18 +14,18 @@ namespace MenuOrder
     {
         List<MainChoice> meals = new List<MainChoice>()
         {
-            new MainChoice { Name = "Hamburger", Price = 5.00m},
-            new MainChoice { Name = "Cheeseburger", Price = 5.45m},
-            new MainChoice { Name = "HotDog", Price = 3.00m},
-            new MainChoice { Name = "Salad", Price = 2.45m}
+            new MainChoice { Name = "Hamburger", Price = 5.00d},
+            new MainChoice { Name = "Cheeseburger", Price = 5.45d},
+            new MainChoice { Name = "HotDog", Price = 3.00d},
+            new MainChoice { Name = "Salad", Price = 2.45d}
         };
 
         List<Drink> drinks = new List<Drink>()
         {
-            new Drink {Name = "Beer", Price = 7.00m},
-            new Drink {Name = "Coke", Price = 2.00m},
-            new Drink {Name = "DietCoke", Price = 2.00m},
-            new Drink {Name = "Water", Price = 0.50m}
+            new Drink {Name = "Beer", Price = 7.00d},
+            new Drink {Name = "Coke", Price = 2.00d},
+            new Drink {Name = "DietCoke", Price = 2.00d},
+            new Drink {Name = "Water", Price = 0.50d}
         };
 
         private void BindComboBox()
@@ -56,9 +56,9 @@ namespace MenuOrder
         private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
             MainChoice m = cmbBoxMainChoice.SelectedItem as MainChoice;
-            subTotal = (double) m.Price;
+            subTotal += m.Price;
             Drink d = cmbBoxDrink.SelectedItem as Drink;
-            subTotal += (double) d.Price;
+            subTotal += d.Price;
             
             txtBoxSubtotal.Text = subTotal.ToString("c");
         }
