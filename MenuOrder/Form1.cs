@@ -59,14 +59,14 @@ namespace MenuOrder
 
         private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
-            // retrieve the food and drinkselections as objects and gets their prices
-            // sends the price string to the form
+            //retrieve the food and drink selections as objects
+            //and gets their prices 
             MainChoice m = cmbBoxMainChoice.SelectedItem as MainChoice;
             subTotal += m.Price;
             Drink d = cmbBoxDrink.SelectedItem as Drink;
             subTotal += d.Price;
             
-            txtBoxSubtotal.Text = subTotal.ToString("c");
+            txtBoxSubtotal.Text = subTotal.ToString("c"); //send subTotal to TextBox
         }
 
         
