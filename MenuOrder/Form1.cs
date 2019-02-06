@@ -28,6 +28,14 @@ namespace MenuOrder
             new Drink {Name = "Water", Price = 0.50m}
         };
 
+        private void BindComboBox()
+        {
+            cmbBoxMainChoice.DataSource = meals;
+            cmbBoxMainChoice.DisplayMember = "Name";
+            cmbBoxDrink.DataSource = drinks;
+            cmbBoxDrink.DisplayMember = "Name";
+        }
+
         double mainOrder;
         double drinkOrder;
 
@@ -47,9 +55,11 @@ namespace MenuOrder
 
         private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
-            mainOrder = Convert.ToDouble(cmbBoxMainChoice.SelectedItem);
-            drinkOrder = Convert.ToDouble(cmbBoxDrink.SelectedItem);
-            subTotal = mainOrder + drinkOrder;
+            MainChoice m = cmbBoxMainChoice.SelectedItem as MainChoice;
+            subTotal = (double) m.Price;
+            Drink d = cmbBoxDrink.SelectedItem as Drink;
+            subTotal += (double) d.Price;
+            
             txtBoxSubtotal.Text = subTotal.ToString("c");
         }
 
