@@ -12,17 +12,24 @@ namespace MenuOrder
 {
     public partial class Form1 : Form
     {
-        double Hamburger = 5.00d;
-        double Cheeseburger = 5.45d;
-        double HotDog = 3.00d;
-        double Salad = 2.45d;
-        double Beer = 7.00d;
-        double Coke = 2.00d;
-        double DietCoke = 2.00d;
-        double Water = 0.5d;
+        List<MainChoice> meals = new List<MainChoice>()
+        {
+            new MainChoice { Name = "Hamburger", Price = 5.00m},
+            new MainChoice { Name = "Cheeseburger", Price = 5.45m},
+            new MainChoice { Name = "HotDog", Price = 3.00m},
+            new MainChoice { Name = "Salad", Price = 2.45m}
+        };
 
-        double mainOrder = 0.0d;
-        double drinkOrder = 0.0d;
+        List<Drink> drinks = new List<Drink>()
+        {
+            new Drink {Name = "Beer", Price = 7.00m},
+            new Drink {Name = "Coke", Price = 2.00m},
+            new Drink {Name = "DietCoke", Price = 2.00m},
+            new Drink {Name = "Water", Price = 0.50m}
+        };
+
+        double mainOrder;
+        double drinkOrder;
 
         double subTotal = 0.0d;
         double Tax = 7.75d;
@@ -40,7 +47,12 @@ namespace MenuOrder
 
         private void btnCalculateOrder_Click(object sender, EventArgs e)
         {
-
+            mainOrder = Convert.ToDouble(cmbBoxMainChoice.SelectedItem);
+            drinkOrder = Convert.ToDouble(cmbBoxDrink.SelectedItem);
+            subTotal = mainOrder + drinkOrder;
+            txtBoxSubtotal.Text = subTotal.ToString("c");
         }
+
+        
     }
 }
