@@ -25,7 +25,7 @@ namespace MenuOrder
             new Drink {Name = "Beer", Price = 7.00d},
             new Drink {Name = "Coke", Price = 2.00d},
             new Drink {Name = "DietCoke", Price = 2.00d},
-            new Drink {Name = "Water", Price = 1.00d}
+            new Drink {Name = "Water", Price = 0.50d}
         };
 
         /// <summary>
