@@ -14,18 +14,18 @@ namespace MenuOrder
     {
         List<MainChoice> meals = new List<MainChoice>()
         {
-            new MainChoice { Name = "Hamburger", Price = 5.00d},
-            new MainChoice { Name = "Cheeseburger", Price = 5.45d},
-            new MainChoice { Name = "HotDog", Price = 3.00d},
-            new MainChoice { Name = "Salad", Price = 2.45d}
+            new MainChoice { Name = "Hamburger", Price = 5.00d },
+            new MainChoice { Name = "Cheeseburger", Price = 5.45d },
+            new MainChoice { Name = "HotDog", Price = 3.00d },
+            new MainChoice { Name = "Salad", Price = 2.45d }
         };
 
         List<Drink> drinks = new List<Drink>()
         {
-            new Drink {Name = "Beer", Price = 7.00d},
-            new Drink {Name = "Coke", Price = 2.00d},
-            new Drink {Name = "DietCoke", Price = 2.00d},
-            new Drink {Name = "Water", Price = 0.50d}
+            new Drink { Name = "Beer", Price = 7.00d },
+            new Drink { Name = "Coke", Price = 2.00d },
+            new Drink { Name = "DietCoke", Price = 2.00d },
+            new Drink { Name = "Water", Price = 0.50d }
         };
 
         /// <summary>
