@@ -43,7 +43,7 @@ namespace MenuOrder
         double drinkOrder;
 
         double subTotal = 0.0d;
-        double Tax = 7.75d;
+        double Tax = 0.00d;
         double Order_total = 0.0d;
 
         public Form1()
@@ -65,8 +65,13 @@ namespace MenuOrder
             subTotal += m.Price;
             Drink d = cmbBoxDrink.SelectedItem as Drink;
             subTotal += d.Price;
-            
+            Tax += subTotal * 0.1;
+            Order_total = subTotal + Tax;
+
+
             txtBoxSubtotal.Text = subTotal.ToString("c"); //send subTotal to TextBox
+            txtBoxTax.Text = Tax.ToString("c"); // send Tax to TextBox
+            txtBoxTotal.Text = Order_total.ToString("c");
         }
 
         
