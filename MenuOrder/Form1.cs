@@ -39,9 +39,6 @@ namespace MenuOrder
             cmbBoxDrink.DisplayMember = "Name";
         }
 
-        double mainOrder;
-        double drinkOrder;
-
         double subTotal = 0.0d;
         double Tax = 0.00d;
         double salesTax = 0.08;
@@ -74,7 +71,5 @@ namespace MenuOrder
             txtBoxTax.Text = Tax.ToString("c"); // send Tax to TextBox
             txtBoxTotal.Text = Order_total.ToString("c");
         }
-
-        
     }
 }
