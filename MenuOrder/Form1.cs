@@ -66,7 +66,6 @@ namespace MenuOrder
             Tax += subTotal * salesTax;
             Order_total = subTotal + Tax;
 
-
             txtBoxSubtotal.Text = subTotal.ToString("c"); //send subTotal to TextBox
             txtBoxTax.Text = Tax.ToString("c"); // send Tax to TextBox
             txtBoxTotal.Text = Order_total.ToString("c");
