@@ -40,21 +40,18 @@
             this.txtBoxSubtotal = new System.Windows.Forms.TextBox();
             this.txtBoxTax = new System.Windows.Forms.TextBox();
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
-            this.btnCaculateOrder = new System.Windows.Forms.Button();
+            this.btnCalculateOrder = new System.Windows.Forms.Button();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbBoxMainChoice
             // 
             this.cmbBoxMainChoice.FormattingEnabled = true;
-            this.cmbBoxMainChoice.Items.AddRange(new object[] {
-            "Hamburger",
-            "Cheeseburger",
-            "Hot Dog",
-            "Salad"});
             this.cmbBoxMainChoice.Location = new System.Drawing.Point(72, 62);
             this.cmbBoxMainChoice.Name = "cmbBoxMainChoice";
             this.cmbBoxMainChoice.Size = new System.Drawing.Size(158, 21);
+            this.cmbBoxMainChoice.Sorted = true;
             this.cmbBoxMainChoice.TabIndex = 0;
             // 
             // lblMainChoice
@@ -69,14 +66,10 @@
             // cmbBoxDrink
             // 
             this.cmbBoxDrink.FormattingEnabled = true;
-            this.cmbBoxDrink.Items.AddRange(new object[] {
-            "Coke",
-            "Diet Coke",
-            "Beer",
-            "Water"});
             this.cmbBoxDrink.Location = new System.Drawing.Point(352, 62);
             this.cmbBoxDrink.Name = "cmbBoxDrink";
             this.cmbBoxDrink.Size = new System.Drawing.Size(159, 21);
+            this.cmbBoxDrink.Sorted = true;
             this.cmbBoxDrink.TabIndex = 2;
             // 
             // label1
@@ -92,15 +85,16 @@
             // 
             this.chkListBoxTopping.FormattingEnabled = true;
             this.chkListBoxTopping.Items.AddRange(new object[] {
+            "Bacon",
             "Ketchup",
             "Mustard",
-            "Pickles",
             "Onions",
-            "Bacon",
+            "Pickles",
             "Tomato"});
             this.chkListBoxTopping.Location = new System.Drawing.Point(72, 147);
             this.chkListBoxTopping.Name = "chkListBoxTopping";
             this.chkListBoxTopping.Size = new System.Drawing.Size(120, 94);
+            this.chkListBoxTopping.Sorted = true;
             this.chkListBoxTopping.TabIndex = 4;
             // 
             // lblCondiments
@@ -163,14 +157,15 @@
             this.txtBoxTotal.Size = new System.Drawing.Size(134, 20);
             this.txtBoxTotal.TabIndex = 11;
             // 
-            // btnCaculateOrder
+            // btnCalculateOrder
             // 
-            this.btnCaculateOrder.Location = new System.Drawing.Point(72, 278);
-            this.btnCaculateOrder.Name = "btnCaculateOrder";
-            this.btnCaculateOrder.Size = new System.Drawing.Size(170, 70);
-            this.btnCaculateOrder.TabIndex = 12;
-            this.btnCaculateOrder.Text = "Get Total";
-            this.btnCaculateOrder.UseVisualStyleBackColor = true;
+            this.btnCalculateOrder.Location = new System.Drawing.Point(72, 278);
+            this.btnCalculateOrder.Name = "btnCalculateOrder";
+            this.btnCalculateOrder.Size = new System.Drawing.Size(170, 70);
+            this.btnCalculateOrder.TabIndex = 12;
+            this.btnCalculateOrder.Text = "Get Total";
+            this.btnCalculateOrder.UseVisualStyleBackColor = true;
+            this.btnCalculateOrder.Click += new System.EventHandler(this.btnCalculateOrder_Click);
             // 
             // btnSubmitOrder
             // 
@@ -182,13 +177,25 @@
             this.btnSubmitOrder.UseVisualStyleBackColor = true;
             this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(607, 159);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(130, 73);
+            this.clearBtn.TabIndex = 14;
+            this.clearBtn.Text = "Redo the order";
+            this.clearBtn.UseMnemonic = false;
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.btnSubmitOrder);
-            this.Controls.Add(this.btnCaculateOrder);
+            this.Controls.Add(this.btnCalculateOrder);
             this.Controls.Add(this.txtBoxTotal);
             this.Controls.Add(this.txtBoxTax);
             this.Controls.Add(this.txtBoxSubtotal);
@@ -222,8 +229,9 @@
         private System.Windows.Forms.TextBox txtBoxSubtotal;
         private System.Windows.Forms.TextBox txtBoxTax;
         private System.Windows.Forms.TextBox txtBoxTotal;
-        private System.Windows.Forms.Button btnCaculateOrder;
+        private System.Windows.Forms.Button btnCalculateOrder;
         private System.Windows.Forms.Button btnSubmitOrder;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
 
