@@ -52,8 +52,7 @@ namespace MenuOrder
 
         private void btnSubmitOrder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for ordering " + cmbBoxMainChoice.Text + " and " + cmbBoxDrink.Text +"!");
-            MessageBox.Show("Please pay "+ txtBoxTotal.Text +" to the cashier");
+            
             Application.Exit();
         }
 
