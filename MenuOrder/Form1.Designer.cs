@@ -42,6 +42,7 @@
             this.txtBoxTotal = new System.Windows.Forms.TextBox();
             this.btnCalculateOrder = new System.Windows.Forms.Button();
             this.btnSubmitOrder = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbBoxMainChoice
@@ -176,11 +177,23 @@
             this.btnSubmitOrder.UseVisualStyleBackColor = true;
             this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(607, 159);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(130, 73);
+            this.clearBtn.TabIndex = 14;
+            this.clearBtn.Text = "Redo the order";
+            this.clearBtn.UseMnemonic = false;
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.btnSubmitOrder);
             this.Controls.Add(this.btnCalculateOrder);
             this.Controls.Add(this.txtBoxTotal);
@@ -218,6 +231,7 @@
         private System.Windows.Forms.TextBox txtBoxTotal;
         private System.Windows.Forms.Button btnCalculateOrder;
         private System.Windows.Forms.Button btnSubmitOrder;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
 

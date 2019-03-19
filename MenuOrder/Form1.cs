@@ -70,5 +70,12 @@ namespace MenuOrder
             txtBoxTax.Text = Tax.ToString("c"); // send Tax to TextBox
             txtBoxTotal.Text = Order_total.ToString("c");
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+
+            Application.Restart();
+            Environment.Exit(0);
+        }
     }
 }
