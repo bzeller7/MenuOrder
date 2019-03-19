@@ -65,7 +65,7 @@ namespace MenuOrder
             subTotal += m.Price;
             Drink d = cmbBoxDrink.SelectedItem as Drink;
             subTotal += d.Price;
-            Tax += subTotal * 0.1;
+            Tax += subTotal * 0.08;
             Order_total = subTotal + Tax;
 
 
